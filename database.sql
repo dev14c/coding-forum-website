@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Aug 19, 2023 at 06:49 AM
+-- Generation Time: Aug 19, 2023 at 07:23 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -61,15 +61,6 @@ CREATE TABLE `comments` (
   `comment_by` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `comments`
---
-
-INSERT INTO `comments` (`comment_id`, `comment_content`, `thread_id`, `comment_time`, `comment_by`) VALUES
-(1, 'this is not good in python', 1, '2023-08-13 14:29:17', 1),
-(2, 'pytho very bad', 1, '2023-08-13 14:29:43', 2),
-(3, 'somebody fix this plz', 1, '2023-08-13 14:29:47', 3);
-
 -- --------------------------------------------------------
 
 --
@@ -105,8 +96,7 @@ CREATE TABLE `threads` (
 --
 
 INSERT INTO `threads` (`thread_id`, `thread_title`, `thread_desc`, `thread_cat_id`, `thread_user_id`, `timestamp`) VALUES
-(1, 'Unable to Install Pyaudio', 'I am not able t o pystudio  on\r\nPython', 1, 1, '2023-07-10 09:18:02'),
-(14, 'django problem', 'this is very bad i think', 3, 4, '2023-08-13 15:18:54');
+(20, 'Unable to install python', 'i am facing a problem can anyone help me', 1, 10, '2023-08-19 10:52:31');
 
 -- --------------------------------------------------------
 
@@ -120,6 +110,13 @@ CREATE TABLE `users` (
   `User_Password` varchar(255) NOT NULL,
   `timestamp` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`Serial_NO`, `User_email`, `User_Password`, `timestamp`) VALUES
+(10, 'example', '$2y$10$LQ5aZzd1GmIkCzizzern7u01ub4JP94aqr2Jq2KkrcteYpSxFQEqC', '2023-08-19 10:51:40');
 
 --
 -- Indexes for dumped tables
@@ -182,13 +179,13 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `threads`
 --
 ALTER TABLE `threads`
-  MODIFY `thread_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `thread_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `Serial_NO` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `Serial_NO` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
