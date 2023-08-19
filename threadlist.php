@@ -137,7 +137,7 @@ if(isset($_SESSION['loggedin']) &&  $_SESSION['loggedin']==true)
 
     
        echo '<div class="media my-3">
-            <img src="default.png" class="mr-3" width="50px" alt="...">
+            <img src="Images/default.png" class="mr-3" width="50px" alt="...">
             <div class="media-body">'.
             
                 '<h5 class="mt-0"><a class="text-dark" href="threadss.php?threadid='. $id .'">'. $title .'<a/></h5>
